@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+main {
+    position: relative;
+    background-color: lightgray;
+    padding: 1rem;
+    width: 180px;
+    height: 95px;
+    margin: 100px auto;
+    .badge {
+        position: absolute;
+        top: -10px;
+        left: 33%;
+        background-color: red;
+        color: white;
+        padding: 1px 2px;
+        font-size: small;
+    }
+    .clock {
+        @include flexCenter(row);
+        height: 100%;
+        background-color: #eee;
+        font-size: 2.3rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+}
